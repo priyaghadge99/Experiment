@@ -1,8 +1,10 @@
-//Q10.	Print all prime number between 51 to 100
-public class Prime51to100 {
+import java.util.Scanner;
 
-    public static void main(String[] args) {
-        for (int num = 51; num <= 100; num++) {
+public class PrimeNext {
+    public void primeNext(int no ) {
+        int num = 0;
+        for(num=no;num<1000;num++)
+        if (num > no) {
             int m = 0, flag = 0;
             m = num / 2;
             if (num == 0 || num == 1) {
@@ -20,5 +22,16 @@ public class Prime51to100 {
                 }
             }
         }
+    
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        PrimeNext primeNext = new PrimeNext();
+        System.out.println("Enter number: - ");
+        int no = scanner.nextInt();
+        primeNext.primeNext(no);
+
+
     }
 }
