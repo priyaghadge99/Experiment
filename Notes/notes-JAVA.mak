@@ -44,33 +44,153 @@ If two interface have same method and one class extend two interface what LL hap
 15.how equals method work on object.
 16.hashmap internal working
 -------------------------------------------------------------------------------------------------
- Spring annotations
+
+
+Spring annotations
+-----------------------------------------------
+class level annotations
+------------------------
+@RestController-- creating controller bean
+@CrossOrigin
+- Used over a Controller, if the request is coming from other IP/domain
+@Service--All your business logic should be in Service classes.
+@Repository-- All your database access logic should be in DAO classes.
+@Component--@Component is a generic stereotype for any Spring-managed component.
+@Repository, @Service, and @Controller are specializations of @Component for more specific use cases,
+for example, in the persistence, service, and presentation layers, respectively.
+------------------------------------------------------------------------------------
+Annotations for extracting data from HTTP Request
+----------
+@RequestBody
+- getting the data from the HTTP request Body
+@PathVariable
+- get the path parameter from the URL
+- /contacts/101   - 101 - path parameter
+@RequestParam
+- to get the values of query parameter from the URL
+-  /contacts?category=friends&age=25   - category, age is a query parameter
+@RequestHeader
+- To get the value of any request header coming in the HTTP request from the client
+ResponseEntity
+object used to customize the reponse
+- set the status
+- set the body
+- set the headers
+/contacts/{name}/category/{catg}
+------------------------------------------------------------------------------------------------------------------
 Hibernate annotations
+@Entity  -- for pojo class
+@Table  --Used to change table details, some of the attributes are-
+
+          name – override the table name
+          schema
+          catalogue
+          enforce unique contrants
+
+@Column -- It is used to specify column mappings.
+@Id -- for primary key
+@GeneratedValue --autoincrement
+@OrderBy(“firstName asc”)
+@Transient	Tells the hibernate, not to add this particular column
+@Temporal	This annotation is used to format the date for storing in the database
+@Lob	Used to tell hibernate that it’s a large object and is not a simple object
+------------------------------------------------------------------------------------------------
 Collection
 Singleton class
+----------------------------------------------------------------------------------------------
 Maven basic commands
+mvn clean
+mvn install
+mvn package --- command builds the maven project and packages them into a JAR
+mvn compiler:compile   //for to compile java source class
+$ mvn compiler:testCompile   ---for test classses compile
+---------------------------------------------------------------------------------
 Exception handling throw and throws
 Project details
 Bean creation
 Hibernate mappin
 SQL complex queries
- Hierarchy of exception
+Hierarchy of exception
 New features in java7
 Jdk ,jre and jvm
 Web server and application server
 How to convert array to list
 How to convert list to array
 Spring modules
+----------------------------------------------------------------------------------------
 Difference between hibernate and jdbc
- Comparator comparable
-Different scopes of spring bean
+
+jdbc is a technology
+does not support association or lazy loading
+slow performance
+user responsible for creating and closing connection.
+
+
+hibernate - is a object relational framework.
+support lazy loading get a better performace
+connection handle by system.
+
+---------------------------------------------------------------------------
+Comparator comparable
+Java provides two interfaces to sort objects using data members of the class:
+
+Comparable- single sorting , ComapreTo() , java.lang  ,Collections.sort(List)    (by using year)
+Comparator- multiple sorting , compare()  , java.util ,Collections.sort(List Comparator)   (by using rating ,name)
+-------------------------------------------------------------------
+
+--------------------------------------------------------------------
 Hashmap
 Concurrent hashmap
+
+ConcurrentHashMap is a thread-safe collection. That is,
+multiple threads can access and modify it at the same time.
+ConcurrentHashMap provides methods for bulk operations like forEach() , search() and reduce() .
+-------------------------------------------------------------------------------
 Wait,notify,notifyall
+defined in object class in Java.
+When wait(): is called on a thread holding the monitor lock,
+it surrenders the monitor lock and enters the waiting state.
+The notify() method wakes up a single thread that is waiting on that object's monitor.
+notifyAll() sends a notification to all waiting threads.
+----------------------------------------------------------------------------
+Different scopes of spring bean
+singleton=single instance per ioc
+prototype=to have any number of object instances.
+request -to http request
+session -to an HTTP session.
+Global-session - to a global HTTP session.
+---------------------------------------------------------------------------
 Bean life cycle
+The Spring IoC container is responsible for instantiating, initializing, and wiring beans.
+The container also manages the life cycle of beans
+ApplicationContext is is in the center of inversion of control in Spring
+To assemble beans, the spring bean factory uses configuration metadata,
+which can be in the form of XML configuration or annotations.
 Spring ioc and setter getter
+The ApplicationContext (internally, it uses BeanFactory)
+--------------------------------------------------------------------------------------------------------
 Bean initialization
+In spring you can initialize a bean by having the applicationContext. xml invoke a constructor,
+or you can set properties on the bean
+---------------------------------------------------------------------
  What is hashmap?
+ HashMap is a part of java.util package.
+ 1. HashMap extends an abstract class AbstractMap which also provides an incomplete implementation of Map interface.
+ 2.It also implements Cloneable and Serializable interface.
+ K and V in the above definition represent Key and Value respectively.
+ to access a value one must know its key.
+ HashMap is known as HashMap because it uses a technique called Hashing.
+ Hashing: is a technique of converting a large String to small String that represents the same String.
+ A shorter value helps in indexing and faster searches.
+
+
+
+ HashMap doesn’t allow duplicate keys but allows duplicate values.
+ That means A single key can’t contain more than 1 value but more than 1 key can contain a single value.
+ HashMap allows null key also but only once and multiple null values.
+ This class makes no guarantees as to the order of the map; in particular,
+ it does not guarantee that the order will remain constant over time.
+ It is roughly similar to HashTable but is unsynchronized.
 -------------------------------------------------------------
 Why we use collections over array?
 
@@ -158,4 +278,20 @@ Spring:
 -----------------------------------------------------------------------------------------------------------
 How spring mvc works?
 
+DispatcherServlet as the Heart of Spring MVC -----
+(All the incoming requests are handled by the single servlet named
+ DispatcherServlet which acts as the front controller in Spring's MVC module)
+1. mapping an HTTP request to a certain processing method.(dispatch()= to find an appropriate handler for the request and feed it the request/response parameters)
+2. parsing of HTTP request data and headers into data transfer objects (DTOs) or domain objects.
+3. model-view-controller interaction.
+4. generation of responses from DTOs, domain objects,
+
+
 Difference between classNotFound Exception and classDefinationNotFound exception?
+ 1.  classNotFound
+ when you try to run a class at run time using Class.
+ forName() or loadClass() methods and mentioned classes are not found in the classpath.
+
+
+ classDefinationNotFound
+ 2. when a particular class is present at compile time, but was missing at run time.
