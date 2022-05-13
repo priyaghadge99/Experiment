@@ -15,19 +15,17 @@ public class Program8 {
             for (int i = 0; i < 10; i++) {
                 bufferedWriter.write("Line by Line printing  " + i + " value");
                 bufferedWriter.newLine();
-                System.out.println("buffer Writer");
             }
+            bufferedWriter.close();
             Scanner scanner = new Scanner(System.in);
             System.out.println("Enter line you wanna read");
             int i = scanner.nextInt();
-//            while ((line = bufferedReader.readLine()) != null) {
-                // process the line
+            String line;
                 String line2 = Files.readAllLines(Paths.get("E://text.txt")).get(i);
-                String readLine = bufferedReader.readLine();
-                System.out.println(readLine);
                 System.out.println(line2);
-           // }
+
         } finally {
+
             bufferedWriter.close();
             bufferedReader.close();
 
@@ -36,6 +34,3 @@ public class Program8 {
 }
 
    // BufferedReader br = new BufferedReader(new FileReader(file));
-
-
-//how to take input from user n then print
