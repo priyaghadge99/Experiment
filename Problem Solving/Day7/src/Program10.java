@@ -1,39 +1,65 @@
-import java.io.*;
-import java.util.*;
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.stream.Collectors;
 
-// Q11.	Create a text file using any simple editor.
-// Write a program that will reverse each line in the input file and store it in another file.
+//Q10.	Read a file and count how many lines ,space and words are there
 public class Program10 {
-
+    static int wordCount=0;
+    static int spaceCount = 0;
+    static int lineCount=0;
+    static  String word = "";
     public static void main(String[] args) throws IOException {
-        Scanner scanner = new Scanner(System.in);
-        FileReader reader = new FileReader("E://text1.txt");
-        BufferedReader bf = new BufferedReader(reader);
-        FileWriter fileWriter = new FileWriter("E://text2.txt");
+        FileReader fileReader = new FileReader("E://x.txt");
+        BufferedReader bf = new BufferedReader(fileReader);
+       List<String> list = new ArrayList<>();
         int line;
-        List<String> list = new ArrayList<>();
-        while ((line = reader.read())!=-1){
-            list= bf.lines().collect(Collectors.toList());  //on stream we can used collect
+
+
+        while ((line = bf.read() )!= -1) {
+            list= bf.lines().collect(Collectors.toList());
+            //read will read all
         }
-        reader.close();
-       StringBuffer stringBuffer = new StringBuffer(String.valueOf(list));
-        String s1 = String.valueOf(list);
-        System.out.println("Actual List : "+s1.toString());
-        StringBuffer reverse = stringBuffer.reverse();
-        System.out.println(reverse);
-        BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
-        for (int i=0;i<list.size();++i) {
-            String s = list.get(i);
-            bufferedWriter.write(s);
-            bufferedWriter.newLine();
-
+        System.out.println(list);
+        for (String s : list) {
+            wordCount += s.split(" ").length;
         }
-        bf.close();
-        bufferedWriter.close();
-        fileWriter.close();
+        System.out.println("===============wordCount=================");
+        System.out.println(" Word Count :: "+wordCount);
+        System.out.println();
 
 
+      countSpace(bf);
 
+      bf.close();
+    fileReader.close();
+    }
+
+    private static void countSpace(BufferedReader bf) throws IOException {
+
+        String line2;
+        while ((line2=bf.readLine())!=null){  //reading each line
+            lineCount++;    //incrementing line count
+
+            System.out.println(lineCount);
+            word += line2;
+        }
+        System.out.println();
+        System.out.println(); System.out.println("===============lineCount=================");
+        System.out.println("lineCount  " + lineCount);
+
+        System.out.println(word);
+        int n = word.length();
+        String s1 = word.replaceAll(" ", "");
+        int s1length = s1.length();
+        spaceCount = n-s1length;
+
+        System.out.println();
+        System.out.println("==============spaceCount=================");
+        System.out.println("spaceCount  " + spaceCount);
+       bf.close();
     }
 }

@@ -1,14 +1,13 @@
-
 import java.io.*;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 import java.util.stream.Collectors;
 
+// Q11.	Create a text file using any simple editor.
+// Write a program that will reverse each line in the input file and store it in another file.
 
-//Q9.	Read a file and copy it in reversing order in to another file
-public class Program9 {
-    public static String s;
+
+public class Program13 {
+
     public static void main(String[] args) throws IOException {
         Scanner scanner = new Scanner(System.in);
         FileReader reader = new FileReader("E://text1.txt");
@@ -16,27 +15,27 @@ public class Program9 {
         FileWriter fileWriter = new FileWriter("E://text2.txt");
         int line;
         List<String> list = new ArrayList<>();
-       while ((line = reader.read())!= -1){
-         list= bf.lines().collect(Collectors.toList());
+        while ((line = reader.read())!=-1){
+            list= bf.lines().collect(Collectors.toList());  //on stream we can used collect
         }
-       reader.close();
-       BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
-        int size = list.size();
-        for (int i=size;i>0;i--)
-        {
-            try {
-                 s = list.get(i);
-                bufferedWriter.write(s);   //nextline feature is in bf that why took bufferwriter
-                bufferedWriter.newLine();
-            }
-            catch (Exception e)
-            {
-                e.getMessage();
-            }
+        reader.close();
+       StringBuffer stringBuffer = new StringBuffer(String.valueOf(list));
+        String s1 = String.valueOf(list);
+        System.out.println("Actual List : "+s1.toString());
+        StringBuffer reverse = stringBuffer.reverse();
+        System.out.println(reverse);
+        BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
+        for (int i=0;i<list.size();++i) {
+            String s = list.get(i);
+            bufferedWriter.write(s);
+            bufferedWriter.newLine();
+
         }
-        bufferedWriter.close();  //do not close stream first ..if its close exception (Stream close)
+        bf.close();
+        bufferedWriter.close();
         fileWriter.close();
+
+
 
     }
 }
-
