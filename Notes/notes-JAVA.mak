@@ -12,6 +12,13 @@ Re-interning n syn
  Difference between @componant and @service
 Session factory is thread safe or not
  Difference between @queryparam and @requestparam
+  @queryparamm
+  ------------ to consume values from query string we use @QueryParam. It is applied in method argument level
+ The @PathVariable 
+ ----------------annotation is used for data passed in the URI (e.g. RESTful web services) 
+ while @RequestParam
+ --------------------is used to extract the data found in query parameters.
+ ---------------------------------------------------------------------------------------------
  What is the difference between constructor and setter injection?
 Explain caching mechanism in hibernate framework?
 What LL the time period for expire cache?
