@@ -1,5 +1,4 @@
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -30,28 +29,24 @@ public class Program10 {
         System.out.println("===============wordCount=================");
         System.out.println(" Word Count :: "+wordCount);
         System.out.println();
+     bf.close();
+     fileReader.close();
 
+      countLineAndSpace(bf);
 
-      countSpace(bf);
-
-      bf.close();
-    fileReader.close();
     }
 
-    private static void countSpace(BufferedReader bf) throws IOException {
-
+    private static void countLineAndSpace(BufferedReader bf) throws IOException {
+        FileReader fileReader = new FileReader("E://x.txt");
+        BufferedReader bufferedReader = new BufferedReader(fileReader);
         String line2;
-        while ((line2=bf.readLine())!=null){  //reading each line
+        while ((line2=bufferedReader.readLine())!=null){  //reading each line
             lineCount++;    //incrementing line count
-
-            System.out.println(lineCount);
             word += line2;
         }
         System.out.println();
         System.out.println(); System.out.println("===============lineCount=================");
         System.out.println("lineCount  " + lineCount);
-
-        System.out.println(word);
         int n = word.length();
         String s1 = word.replaceAll(" ", "");
         int s1length = s1.length();
@@ -61,5 +56,6 @@ public class Program10 {
         System.out.println("==============spaceCount=================");
         System.out.println("spaceCount  " + spaceCount);
        bf.close();
+       fileReader.close();
     }
 }
