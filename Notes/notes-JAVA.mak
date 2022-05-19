@@ -116,7 +116,17 @@ Jdk ,jre and jvm
 Web server and application server
 How to convert array to list
 How to convert list to array
+----------------------------------------------------------------------------------
 Spring modules
+- Spring Core
+    - Basic functionalies of Spring Framework
+ - Spring Context
+ - Spring web
+ - Spring MVC
+ - Spring ORM
+ - Spring AOP
+
+
 ----------------------------------------------------------------------------------------
 Difference between hibernate and jdbc
 
