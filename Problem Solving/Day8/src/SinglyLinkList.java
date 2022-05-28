@@ -16,7 +16,6 @@ public class SinglyLinkList
     public static Node head ;
     public static Node tail ;
 
-
     static class Node {
 
         int data ;
@@ -65,6 +64,7 @@ public class SinglyLinkList
         singlyLinkList1.head.next= node;
         node.next =node3;
         node3=tail;
+//        System.out.println(singlyLinkList1.toString().toCharArray());
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("" +
@@ -100,11 +100,15 @@ public class SinglyLinkList
 //                displayLinkList();               // static to static --------------no need to add obj.method
 //                System.out.println(node);
                 System.out.println("===============");
-                insertNodeAtEnd(12,singlyLinkList1);
-//                insertNodeAfter(node,134,singlyLinkList1);
+//                insertNodeAtEnd(12,singlyLinkList1);  //working
+                insertNodeAfter(node,134,singlyLinkList1);
                 displayLinkList();
                 break;
-
+            case 'e' :
+                System.out.println("        e.\tDelete node ");
+                deleteLinkList(singlyLinkList1,node3);
+                displayLinkList();
+                break;
 
 
             default:
@@ -112,7 +116,6 @@ public class SinglyLinkList
         }
 
     }
-
 
 
     private static void createLinkList()
@@ -193,7 +196,8 @@ public class SinglyLinkList
     private static SinglyLinkList  insertNodeAtHead( SinglyLinkList singlyLinkList) {  //TC O(1)
 
         Node newNode = new Node(23);
-        Node temp = null;
+        singlyLinkList.head= head;
+
         if (head==null)
         {
             head=newNode;
@@ -202,38 +206,54 @@ public class SinglyLinkList
 
         else {
 
-                 head.next = newNode;     // added element at tail
-                 head = newNode;
+                 head.next = newNode;     //new node --link to head cha next
+                 head = newNode;         //now newnode become head.
 
 
             }
-
-
 
 
         return singlyLinkList;
 
     }
 
-    private static SinglyLinkList insertNodeAfter(Node node,int data,SinglyLinkList list) {
+    private static void insertNodeAfter(Node node,int data,SinglyLinkList list) {
         Node  newNode = new Node(data);
+        Node last= node;
+        Node nodetrv =list.head;
+
+
+
 
         if (node ==null){
             System.out.println("Node is null");
-           return list ;
         }
 
+        System.out.println(nodetrv.next +" is null ?" );
 
-        Node last= node;
+        while (nodetrv.next!=null){   //traversing upto last node
 
-        while (last!=null){
-            newNode.next =last.next;   //both point to same
-            last.next = newNode;
-            newNode=tail;
-            newNode.next =null;
+           if (nodetrv.next==last) {  // if next node is last=node
+//               newNode.next = last.next;   //both point to same
+               last.next = newNode;
+//               newNode = tail;
+//               newNode.next = SinglyLinkList.tail;
+              SinglyLinkList.tail=  newNode.next;
+               System.out.println(SinglyLinkList.tail);
+               System.out.println(SinglyLinkList.tail==newNode.next);
+               break;
+           }
+           newNode.next = SinglyLinkList.tail;
+           newNode.next=list.tail;
+//            System.out.println(newNode.next);
+            newNode.next=tail;
+
 
         }
-        return list;
+        //12
+        //10
+        //134  only addition of element not a attachin to tail
+
     }
     private static void insertNodeAtEnd(int data ,SinglyLinkList list) {
        //creating a newnode
@@ -257,6 +277,36 @@ public class SinglyLinkList
 
             }
         }
+
+    private static void deleteLinkList(SinglyLinkList singlyLinkList1, Node node3) {
+        Node last= SinglyLinkList.head;
+
+        System.out.println("=====");
+        while (last.next!=tail ){  //for traversing list
+
+            System.out.println("=In while===");
+            System.out.println(SinglyLinkList.tail);
+
+
+//                System.out.println("===in if");
+//                last.next=node3.next;
+//                node3=last;
+            System.out.println(last.data +" ");
+
+
+            last=last.next;
+
+        }
+
+        singlyLinkList1.tail = last;
+        System.out.println(last.data  +"-- ");
+        singlyLinkList1.tail.next = null;
+        tail=last;
+        System.out.println("End" +tail.getData());
+        //not working yet
+
+    }
+
 
 
 }
