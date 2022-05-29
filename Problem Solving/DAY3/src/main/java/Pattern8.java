@@ -1,6 +1,8 @@
-//  1
-// 121
-//12321
+/*       1
+        121
+       12321
+        121
+         1 */
 public class Pattern8 {
     public static void main(String[] args) {
 
