@@ -16,7 +16,7 @@ public class SinglyLinkList
     public static Node head ;
     public static Node tail ;
 
-    static class Node {
+  /*  static class Node {
 
         int data ;
         Node next;
@@ -44,7 +44,7 @@ public class SinglyLinkList
             this.next = null;   //
         }
 
-    }
+    }*/
 
 
 
@@ -106,8 +106,10 @@ public class SinglyLinkList
                 break;
             case 'e' :
                 System.out.println("        e.\tDelete node ");
-                deleteLinkList(singlyLinkList1,node3);
+                deleteNodeFromLast(singlyLinkList1,node3);
                 displayLinkList();
+//                deleteNodeFromFirst(singlyLinkList1);
+
                 break;
 
 
@@ -116,6 +118,8 @@ public class SinglyLinkList
         }
 
     }
+
+
 
 
     private static void createLinkList()
@@ -278,34 +282,71 @@ public class SinglyLinkList
             }
         }
 
-    private static void deleteLinkList(SinglyLinkList singlyLinkList1, Node node3) {
+    private static void deleteNodeFromFirst(SinglyLinkList singlyLinkList1) {
         Node last= SinglyLinkList.head;
 
         System.out.println("=====");
-        while (last.next!=tail ){  //for traversing list
+    //check whether list is empty
+        if(head == null) {
+            System.out.println("List is empty");
+            return;
+        }
+        //if list is not empty then
+        else {
+            //Checks whether the list contains only one node
+            //If not, the head will point to next node in the list and tail will point to the new head.
+            if(head != tail) {
+                head = head.next;   //head cha next store in head
+            }
+            //If the list contains only one node
+            //then, it will remove it and both head and tail will point to null
+            else {
+                head = tail = null;
+            }
+        }
+    }
 
-            System.out.println("=In while===");
-            System.out.println(SinglyLinkList.tail);
+    private static void deleteNodeFromLast(SinglyLinkList singlyLinkList1, Node node3) {
 
 
-//                System.out.println("===in if");
-//                last.next=node3.next;
-//                node3=last;
-            System.out.println(last.data +" ");
+        //check if list is emepty
 
+        if (head==null){
+            System.out.println("List is empty");
+            return;
 
-            last=last.next;
+        }
+        //if list is not empty
+        else {
+              //if list not contain one node
+            if (head!=tail){
+
+                Node last= SinglyLinkList.head;
+
+                while (last.next!=tail){
+                    System.out.println("In while  ---    " +last.data+"\n");
+                    last=last.next;
+                }
+
+                System.out.println("Last data "+last.data);
+               //to store 2nd last value in tail
+                tail=last;
+
+                tail.next=null;
+
+            }
+            // if list contain one node
+            else {
+                head=tail;
+                tail=null;
+
+            }
 
         }
 
-        singlyLinkList1.tail = last;
-        System.out.println(last.data  +"-- ");
-        singlyLinkList1.tail.next = null;
-        tail=last;
-        System.out.println("End" +tail.getData());
-        //not working yet
 
     }
+
 
 
 
