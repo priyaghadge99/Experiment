@@ -33,10 +33,20 @@ Difference between abstraction and encapsulation how it is done in your project
 Heap memory area and stack memory area in java
 Fail fast and fail safe iterator
 ------------------------------------------------------------
- 1.What is dependency injection
+ 1.What is dependency injection:
+               Spring IoC is achieved through Dependency Injection. Dependency Injection is the method of providing the dependencies and 
+               Inversion of Control is the end result of Dependency Injection. 
+               IoC is a design principle where the control flow of the program is inverted.
 2.What is difference between setter injection and constructor injection
-3.What is autowiring
-4.What is qualifier
+3.What is autowiring:
+            Autowiring feature of spring framework enables you to inject the object dependency implicitly. It internally uses setter or constructor injection. 
+            Autowiring can't be used to inject primitive and string values. It works with reference only.
+
+4.What is qualifier:
+              The @Qualifier annotation in Spring is used to differentiate a bean among the same type of bean objects. 
+ If we have more than one bean of the same type and want to wire only one of them then 
+use the @Qualifier annotation along with @Autowired to specify which exact bean will be wired.
+
 5.What is view resolver
 6.What is dispatcher servlet
 7.What controller returns
