@@ -23,3 +23,16 @@ public class Pattern16 {
 
     }
 }
+
+
+//--**--
+//-****-
+//******
+
+
+// if(j==i || j==rows || i==1){
+//         System.out.print("*");
+//         }
+//         else{
+//         System.out.print(" ");
+//         }
