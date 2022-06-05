@@ -5,7 +5,7 @@ public class BinarySearch {
 
     public static void main(String[] args) {
         int arr[]= { 2,5,8,12,16,23,38,52,72,91};
-        int key =23;
+        int key =52;
         System.out.println("Array length " +arr.length);
         int low = 0 ,high = arr.length-1;
 
@@ -21,28 +21,41 @@ public class BinarySearch {
     }
 
     private static int binarySearch(int low, int high, int key, int[] arr) {
-        int mid = low+(high-1)/2;  //mid=4
+       //mid=4
         int index;
-        if (low<high){
+        while(low<=high){
 
+            int mid = low+(high-low)/2;  //main logic is here //
 
-            if (key==arr[mid]){
+            if (key==arr[mid])
                 return mid ;
-            }
-            else if (key>arr[mid]){    //key greater than mid means its in right half
-                return mid+1;
 
-            }
-            else {      //else keu in left half
-               return mid-1;
-            }
+//            If key greater, ignore left half
+             if (key>arr[mid])
+                //key greater than mid means its in right half
+                low=mid+1;
+
+             //If key smaller, ignore right half
+             else       //else keu in left half
+              high= mid-1;
+
+
 
         }
-        else {
-            System.out.println("Enter Correct choice");
-            return -1;
-        }
+//        else {
+//            System.out.println("Enter Correct choice");
+//            return -1;
+//        }
 
 
+        return -1;
     }
 }
+
+
+/*But if we calculate the middle index like this(int mid = (low + high)/2;) means our code is not 100% correct, it contains bugs.
+
+        That is, it fails for larger values of int variables low and high. Specifically, it fails if the sum of low and high is greater than the maximum positive int value(231 – 1 ).
+
+        The sum overflows to a negative value and the value stays negative when divided by 2.
+        In java, it throws ArrayIndexOutOfBoundException. */
