@@ -49,8 +49,12 @@ use the @Qualifier annotation along with @Autowired to specify which exact bean 
 
 5.What is view resolver
 6.What is dispatcher servlet
-7.What controller returns
-8.How controller passes the view
+7.What controller returns:
+
+8.How controller passes the view:
+           The other way of passing the data from Controller to View can be by passing an object of the model class to the View. 
+           Erase the code of ViewData and pass the object of model class in return view. 
+           Import the binding object of model class at the top of Index View and access the properties by @Model.
 9.Why we use private constructor
 10.How we stop method overriding
 If two interface have same method and one class extend two interface what LL happen?
