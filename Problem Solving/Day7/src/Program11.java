@@ -6,7 +6,7 @@ import java.util.stream.Collectors;
 // Write a program that will reverse each line in the input file and store it in another file.
 
 
-public class Program13 {
+public class Program11 {
 
     public static void main(String[] args) throws IOException {
         Scanner scanner = new Scanner(System.in);

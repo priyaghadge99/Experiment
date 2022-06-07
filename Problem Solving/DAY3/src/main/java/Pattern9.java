@@ -4,30 +4,24 @@
 public class Pattern9 {
     public static void main(String[] args) {
         int row=3;
+        int val = 0;
         for (int i=row;i>=1;i--)
         {
-//            for (int j = i -2; j >= 3; j++) {      /* print blank spaces */  // 3-2 = 1   j>=3 :false
-                                                        //if row =2  2-2 =0  j>=
-
-                for (int j = 3 - i; j >= 1; j--)
-                {                                     // 3-1 =2   2<
-                    System.out.print(" ");
+                for (int j = 1; j <= row -i; ++j)
+                {                                     //print o space for i=row=3
+                    System.out.print("  ");
                 }
 
            // System.out.print(i);//
-            for(int j=3;j>=1;j--){       //printing j upto middle 321
-                System.out.print(j);//
+            for(int j=0;j<=i-1;j++){       // print 321
+                System.out.print(row-j +" ");
+                val = row -j;        // store last value of loop in val=1
 
             }
-//            for(int j=2;j<=i;j++){      //printing value after mid 23
-//                System.out.print(j);//
-//            }
-
-            for (int j=3;j<=i;j++){
-                int value=1;
-                System.out.print(value);
-                value++;
+            for(int j=val+1;j<=row;j++){      //printing value after mid 23
+                System.out.print(j +" ");//
             }
+
             System.out.println();
         }
     }

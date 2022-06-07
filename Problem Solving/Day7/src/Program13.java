@@ -8,7 +8,7 @@ import java.util.stream.Collectors;
 
 ////Q13.	Write a program that will read each line in a file and store it in another file with the sequence reversed, that is,
 //// the first line in file one should be the last line in file two and so on.
-public class Program11 {
+public class Program13 {
     public static String s;
     public static void main(String[] args) throws IOException {
         Scanner scanner = new Scanner(System.in);

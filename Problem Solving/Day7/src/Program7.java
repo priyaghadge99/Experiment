@@ -9,15 +9,15 @@ import java.util.Scanner;
 public class Program7
 {
     public static void main(String[] args) throws IOException {
-        File file = new File("E://text1.txt");
+//        File file = new File("E://text1.txt");
         FileReader fileReader = new FileReader("E://text.txt");
 //        FileWriter fileWriter = new FileWriter("E://text.txt");
         BufferedReader bufferedReader = new BufferedReader(fileReader);
-        String line = bufferedReader.readLine();
-        String line2 = Files.readAllLines(Paths.get("E://text.txt")).get(1);
+//        String line = bufferedReader.readLine();
+        String line2 = Files.readAllLines(Paths.get("E://text.txt")).get(5);
 
         //display the 1st line
-        System.out.println(line);
+//        System.out.println(line);
         System.out.println(line2);
         fileReader.close();
     }

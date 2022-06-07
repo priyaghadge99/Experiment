@@ -56,10 +56,10 @@ public class StudentMain {
             if ((studentArrayList.get(i).getDiv())==studentArrayList.get(j).getDiv()) {
              name1 = studentArrayList.get(i).getName();
              div = studentArrayList.get(i).getDiv();
-            float percentage = studentArrayList.get(i).getPercentage();
+             float percentage = studentArrayList.get(i).getPercentage();
              percentageStr = Integer.toString((int) percentage);
 
-                System.out.println(div);
+            System.out.println(div);
             list.add(name1);
             list.add(percentageStr);
         }
