@@ -17,7 +17,9 @@ public class BubbleSort {
                    int temp = arr[j];  //swap logic  if 5>1
                     arr[j] = arr[i];
                     arr[i] = temp;
+
                 }
+
             }
 
         }
