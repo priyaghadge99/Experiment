@@ -1,4 +1,4 @@
-import static jdk.nashorn.internal.objects.Global.print;
+
 
 public class InsertionSort {
 

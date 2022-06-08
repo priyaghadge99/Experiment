@@ -72,3 +72,86 @@ public class QuickSort {
         8 swap A[i+1] with A[end]
         9 return i+1
     }*/
+
+
+
+
+
+/*  s5r -0 and end - 6
+[24, 9, 29, 14, 19, 27]
+* now pivot 27 , i=-1
+j=0 , i=-1 and pivot =27
+arr[i]  index out of bound
+
+i=0 j=0  arr[i]=arr[j]=24   but arr[i+1]=9
+-------------------------------------------
+j=1 start  , pivot =27 ,[24, 9, 29, 14, 19, 27]
+arr[j] =9  and pivot =27   arr[j]<pivot =true
+i++ i=1  and arr[i] =24
+swap  --now arr[i]=9  and arr[j]=9
+
+--------------------------------------------
+in for loop j=2  and i=1 by prev
+arr[j] =arr[2] = 29 <pivot(27)  false
+not in if
+
+j=3 and i=1
+14<27  true     in if  i++ and i=2
+swap arr[2] with arr[3]              arr[i+1] =14
+      29           14
+
+j=4 and i=2  //[24, 9, 14, 29, 19, 27]
+arr[4]=19 <pivot 27  True n i++ i=3
+swap arr[3] to arr[j]
+
+[24, 9, 14, 19, 29, 27]
+
+
+for loop end j=5
+
+------------------------------------------------------
+now i=3 ......arr[i+1] =29
+swap with arr[end]=arr[5]=27
+
+[24, 9, 14, 19, 27, 29]
+
+partition return i+1 = 3+1 =4
+
+
+
+-------------------------------------------------
+now again chceked with start 0 and end =3
+
+now pivot is 19  arr[j]=19  [24, 9, 14, 19, 27, 29]
+now j=0 and i=-1
+24<19 false not enter in loop to swap
+---------------------------------------
+for j=1 i=-1
+9<19 i++ i=0  swap arr[i] with arr[j]
+arr[0]=24 swap with arr[j]=arr[1]=9   [9, 24, 14, 19, 27, 29]
+
+
+j=2 i=0
+14<19 true i++ i=1
+swap logic arr[i] with arr[j]  [9, 14, 24, 19, 27, 29]
+
+now j=3 end for loop
+
+arr[i+1] = arr[2]=24
+arr[end] =19
+swap  above two
+[9, 14, 19, 24, 27, 29]
+
+
+return partion =i=2
+
+so again quickstart (arr , 0 , p-1)  p-1 thats 2-1
+start=0 and i=-1 [9, 14, 19, 24, 27, 29] now 14 will pivot
+9<14 true i=0 and
+swap arr[0] with arr[0]
+
+return i+1 i=1
+---------------------------------------
+
+
+*/
