@@ -151,6 +151,10 @@ start=0 and i=-1 [9, 14, 19, 24, 27, 29] now 14 will pivot
 swap arr[0] with arr[0]
 
 return i+1 i=1
+
+
+
+
 ---------------------------------------
 
 
