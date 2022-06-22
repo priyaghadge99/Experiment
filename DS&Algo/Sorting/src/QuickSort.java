@@ -156,6 +156,18 @@ return i+1 i=1
 
 
 ---------------------------------------
+while doing revert
+git revert commit id
+:wq!
 
+git commit -m ""
+
+git push
+
+three steps need to perform
 
 */
+
+
+
+
