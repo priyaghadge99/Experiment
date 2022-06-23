@@ -4,8 +4,6 @@ public class CountingSort {
 
 
     private static void countingSort(int[] arr) {   // different main
-        int outputArr[] = new int[arr.length];
-
         int n = arr.length;
         int[] output = new int[n];
         int[] countArr = new int[n];
@@ -51,3 +49,10 @@ public class CountingSort {
     }
 }
 
+//Please commit your changes or stash them before you merge.
+//Aborting
+//Updating fe15911..746c271
+
+
+// git reset --hard  -- if u want to remove local changes ...n get updated with repo
+//HEAD is now at fe15911 Insertion Sort Logic added
