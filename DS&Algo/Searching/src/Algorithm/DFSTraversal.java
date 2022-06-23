@@ -10,7 +10,7 @@ public class DFSTraversal {
     // /* Creation of the graph */
     public DFSTraversal(int v) {  //constructor
         vertex =v;
-        adj = new LinkedList[v];  ///imp ...I could not null due to this
+        adj = new LinkedList[v];  ///imp ... could not null due to this
         for (int i=0;i<v;++i) {
             adj[i] = new LinkedList();
 
