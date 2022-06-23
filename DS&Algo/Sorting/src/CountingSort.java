@@ -28,8 +28,8 @@ public class CountingSort {
 
         for (int i = n - 1; i >= 0; i--) {
 
-            output[countArr[arr[i]] - 1] = arr[i];
-            --countArr[arr[i]];
+            output[countArr[arr[i]] - 1] = arr[i];   // o/p array = [0 1 1 1 3 3]
+            --countArr[arr[i]];                       //countarr= [0,1,4,4,6,6]
         }
 
 
