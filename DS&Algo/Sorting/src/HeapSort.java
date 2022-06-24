@@ -63,3 +63,6 @@ public class HeapSort {
 
     }
 }
+
+
+//git rm -r --cached folder/file
