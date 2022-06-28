@@ -10,6 +10,7 @@ public class MergeSort {
             sort(arr, m + 1, r);
             //then call merge function to merge sort
             merge(arr, l, m, r);
+
         }
 
     }
@@ -91,3 +92,4 @@ step 1: start
         mergesort(array, mid+1, right)
         merge(array, left, mid, right)
         step 4: Stop*/
+
