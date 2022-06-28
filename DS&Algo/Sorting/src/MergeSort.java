@@ -4,7 +4,8 @@ public class MergeSort {
 
     void sort(int[] arr, int l, int r) {
         if (l < r) {
-            int m = l + (r - l) / 2;
+//            int m = l + (r - l) / 2;
+            int m =(l+r)/2;
             sort(arr, l, m);
             sort(arr, m + 1, r);
             //then call merge function to merge sort
@@ -34,7 +35,7 @@ public class MergeSort {
         int i = 0, j = 0;
         int k = l;
         while (i < n1 && j < n2) {
-            if (L[i] <= R[i]) {
+            if (L[i] <= R[j]) {
                 arr[k] = L[i];
                 i++;
             } else {
