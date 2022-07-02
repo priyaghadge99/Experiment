@@ -90,3 +90,19 @@ step 1: start
         mergesort(array, mid+1, right)
         merge(array, left, mid, right)
         step 4: Stop*/
+
+
+
+/* to remove local changes  :-- pointing to previos commit
+*Please commit your changes or stash them before you merge.
+Aborting
+Updating 9f209f4..fbd2c55
+*
+*
+* now head will point to 9f209f4
+
+* */
+  //  git reset HEAD --hard
+
+
+
