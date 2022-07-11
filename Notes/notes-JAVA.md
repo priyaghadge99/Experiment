@@ -128,16 +128,17 @@ Hibernate annotations
           catalogue
           enforce unique contrants
 
--@Column -- It is used to specify column mappings.
--@Id -- for primary key
--@GeneratedValue --autoincrement
--@OrderBy(“firstName asc”)
--@Transient	Tells the hibernate, not to add this particular column
--@Temporal	This annotation is used to format the date for storing in the database
--@Lob	Used to tell hibernate that it’s a large object and is not a simple object
+- [0] @Column -- It is used to specify column mappings.
+- [0] @Id -- for primary key
+- [0] @GeneratedValue --autoincrement
+- [0] @OrderBy(“firstName asc”)
+- [0] @Transient	Tells the hibernate, not to add this particular column
+- [0] @Temporal	This annotation is used to format the date for storing in the database
+- [0] @Lob	Used to tell hibernate that it’s a large object and is not a simple object
 
 
-------------------------------------------------------------------------------------------------
+-------------------
+
 Collection
 Singleton class
 
