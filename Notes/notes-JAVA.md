@@ -293,19 +293,19 @@ What is list,set and map?
 
 --------
 
--set-   
+### set-   
 
         -(unorder)
         -hashset
         -LinkHashSet - Order
         -TreeSet    -  Sorted  (implementation of the SortedSet interface by compare() or compareTo() method. )
 
--map-
-        - [1]hashmap- allow null value and one null key.
-        - [2]LinkHashMap -  order
-        - [3]treeMap-- TreeMap maintains the order of the objects but HashMap will not
-        - [4]Hashtable
--List -
+### map -
+        - [1] hashmap- allow null value and one null key.
+        - [2] LinkHashMap -  order
+        - [3] treeMap-- TreeMap maintains the order of the objects but HashMap will not
+        - [4] Hashtable
+### List -
            -(order collection)
                 -ArrayList- faster than vector
                 -LinkList
