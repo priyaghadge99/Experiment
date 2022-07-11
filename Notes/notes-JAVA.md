@@ -398,43 +398,43 @@ Difference between classNotFound Exception and classDefinationNotFound exception
 Following are the design patterns used in Spring Framework
 -----
 
-- mvc pattern :
-  - Model 
-    - Data about the state of the application or its components.
-    - May include routines for modification or access.
-  - View - An interpretation of the data (model). 
-    - This is only limited to a visual representation, but could be audio, derived information (e.g. statistics piped into another model object), etc. Furthermore, a single model may have multiple views.
-  - Control - 
-    - Handles external input to the system invoking modifications on the model. 
-    - The control/view may be closely related (in the case of a UI). However, other external input (such as network commands), may be processed which are completely independent of the view.                     
+ - mvc pattern :
+   - Model 
+     - Data about the state of the application or its components.
+     - May include routines for modification or access.
+   - View - An interpretation of the data (model). 
+     - This is only limited to a visual representation, but could be audio, derived information (e.g. statistics piped into another model object), etc. Furthermore, a single model may have multiple views.
+   - Control - 
+     - Handles external input to the system invoking modifications on the model. 
+     - The control/view may be closely related (in the case of a UI). However, other external input (such as network commands), may be processed which are completely independent of the view.                     
 
 
-- Proxy Pattern :
-  - Spring uses either JDK proxies (preferred wheneven the proxied target implements at least one interface) or CGLIB proxies (if the target object does not implement any interfaces) to create the proxy for a given target bean.
-  - Unless configured to do otherwise, Spring AOP performs run-time weaving Suppose we want to log every method entry and exit. This can be achieved by writing log statements in every method at the start and end. But this will require lot of code work. There are various such tasks like Security which need to be applied across all methods or classes. These are known as cross cutting concerns.AOP addresses the problem of cross-cutting concerns, which would be any kind of code that is repeated in different methods and cannot normally be completely refactored into its own module, like with logging or verification
+  - Proxy Pattern :
+   - Spring uses either JDK proxies (preferred wheneven the proxied target implements at least one interface) or CGLIB proxies (if the target object does not implement any interfaces) to create the proxy for a given target bean.
+   - Unless configured to do otherwise, Spring AOP performs run-time weaving Suppose we want to log every method entry and exit. This can be achieved by writing log statements in every method at the start and end. But this will require lot of code work. There are various such tasks like Security which need to be applied across all methods or classes. These are known as cross cutting concerns.AOP addresses the problem of cross-cutting concerns, which would be any kind of code that is repeated in different methods and cannot normally be completely refactored into its own module, like with logging or verification
   
 
-  - ![proxy pttern img ](https://www.baeldung.com/wp-content/uploads/2020/02/Proxy-class-diagram.png)
+ - ![proxy pttern img ](https://www.baeldung.com/wp-content/uploads/2020/02/Proxy-class-diagram.png)
 
-  - Factory Pattern	
-    - patterns is used by spring to load beans using BeanFactory and Application context.
-    - Often, we want to create different objects based on a particular context.
-    - example, our application may require a vehicle object. In a nautical environment, we want to create boats, but in an aerospace environment, we want to create airplanes:
+ - Factory Pattern	
+     - patterns is used by spring to load beans using BeanFactory and Application context.
+     - Often, we want to create different objects based on a particular context.
+     - example, our application may require a vehicle object. In a nautical environment, we want to create boats, but in an aerospace environment, we want to create airplanes:
   
-    - ![factory pattern](https://www.baeldung.com/wp-content/uploads/2020/02/Factory-pattern.png)
+     - ![factory pattern](https://www.baeldung.com/wp-content/uploads/2020/02/Factory-pattern.png)
+       ```
+       public interface BeanFactory {
+
+       getBean(Class<T> requiredType);
+       getBean(Class<T> requiredType, Object... args);
+       getBean(String name);
+
+        ...
+       ]
       ```
-      public interface BeanFactory {
-
-      getBean(Class<T> requiredType);
-      getBean(Class<T> requiredType, Object... args);
-      getBean(String name);
-
-       ...
-      ]
-     ```
     
 
-  - Singleton :
+ - Singleton :
     - Beans defined in spring config files are singletons by default
     - Singleton pattern says that one and only one instance of a particular class will ever be created per classloader
     - It is the scope of bean definition to a single object instance per Spring IoC container. 
@@ -443,9 +443,9 @@ Following are the design patterns used in Spring Framework
     - 
     - ![Singleton](https://www.baeldung.com/wp-content/uploads/2020/02/Singleton.png)
   
-  - Template pattern
-    - Template method design pattern is to define an algorithm as skeleton of operations and leave the details to be implemented by the child classes. The overall structure and sequence of the algorithm is preserved by the parent class. 
-    - These are used extensively to deal with boilerplate repeated code
+ - Template pattern
+     - Template method design pattern is to define an algorithm as skeleton of operations and leave the details to be implemented by the child classes. The overall structure and sequence of the algorithm is preserved by the parent class. 
+     - These are used extensively to deal with boilerplate repeated code
 
 
         For example, when executing a query on a database, the same series of steps must be completed:
@@ -455,19 +455,19 @@ Following are the design patterns used in Spring Framework
                 Perform cleanup
                 Close the connection
   
-  - FrontController pattern :
+ - FrontController pattern :
     - Front Controller is a controller pattern which provides a centralized controller for managing requests. Each client request must go through and be processed by the Front Controller first, no exceptions.
     - All incoming data is delegated to front controller first
     - Useful for when your application has multiple entry points which you want to centralize through a single point for standardized processing.
     - Spring implements this design pattern using DispatcherServlet, to dispatch incoming requests to the correct controllers.
 
-  - View Helper pattern :
-    - View Helper arranges view components for the user and delegates processing to other business components so the view component doesn't have to contain any processing logic other than logic to present views.
-    - Spring makes use of custom JSP tags etc to separate code from presentation in views. 
+ - View Helper pattern :
+   - View Helper arranges view components for the user and delegates processing to other business components so the view component doesn't have to contain any processing logic other than logic to present views.
+   - Spring makes use of custom JSP tags etc to separate code from presentation in views. 
   
-  - Prototype pattern
-    - it creates objects based on a template of an exsiting object through cloning.
-    - is known as a creational pattern,as it is used to construct objects such that they can be decoupled from their implementing systems.
-  - DI/ IOC pattern :
-    - Dependency Injection/Inversion of Control design pattern allows us to remove the hard-coded dependencies and make our application loosely coupled, extendable and maintainable.
-    - We can implement dependency injection in java to move the dependency resolution from compile-time to runtime.
+ - Prototype pattern
+     - it creates objects based on a template of an exsiting object through cloning.
+     - is known as a creational pattern,as it is used to construct objects such that they can be decoupled from their implementing systems.
+ - DI/ IOC pattern :
+     - Dependency Injection/Inversion of Control design pattern allows us to remove the hard-coded dependencies and make our application loosely coupled, extendable and maintainable.
+     - We can implement dependency injection in java to move the dependency resolution from compile-time to runtime.
