@@ -4,13 +4,11 @@ public class MergeSort {
 
     void sort(int[] arr, int l, int r) {
         if (l < r) {
-//            int m = l + (r - l) / 2;
-            int m =(l+r)/2;
+            int m = l + (r - l) / 2;
             sort(arr, l, m);
             sort(arr, m + 1, r);
             //then call merge function to merge sort
             merge(arr, l, m, r);
-
         }
 
     }
@@ -36,7 +34,7 @@ public class MergeSort {
         int i = 0, j = 0;
         int k = l;
         while (i < n1 && j < n2) {
-            if (L[i] <= R[j]) {
+            if (L[i] <= R[i]) {
                 arr[k] = L[i];
                 i++;
             } else {
@@ -50,7 +48,7 @@ public class MergeSort {
         //remaining in L
         while(i<n1){
             arr[k] = L[i];
-                    i++;
+            i++;
             k++;
         }
         //remaining in R which is greater
@@ -92,4 +90,18 @@ step 1: start
         mergesort(array, mid+1, right)
         merge(array, left, mid, right)
         step 4: Stop*/
+
+
+
+/* to remove local changes  :-- pointing to previos commit
+*Please commit your changes or stash them before you merge.
+Aborting
+Updating 9f209f4..fbd2c55
+*
+*
+* now head will point to 9f209f4
+* */
+//  git reset HEAD --hard
+
+
 
