@@ -353,10 +353,12 @@ Features of java 1.8?
 -----------------------------------------------------------------------------------------------------------------
 Why we use spring over servlet?
 
-Servlet:
+Servlet--
         a server side java class to produce the html content.
-Spring:
+Spring--
         A framework to develop Big Enterprise Application which include your servlet as well.
+
+
 -----------------------------------------------------------------------------------------------------------
 How spring mvc works?
 ---
