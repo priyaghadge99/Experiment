@@ -1,5 +1,6 @@
-Point cut in Aop
-Different between merge n update
+####Point cut in Aop
+####Different between merge n update
+-------------------------------------------------------------
 Concurrent vs syn lock
  Hibernate locking
 Re-interning n syn
@@ -11,13 +12,11 @@ Re-interning n syn
  How to achieve thread sefty in spring
  Difference between @componant and @service
 Session factory is thread safe or not
+----------------------------------------------------------------------------------
  Difference between @queryparam and @requestparam
-  @queryparamm
-  ------------ to consume values from query string we use @QueryParam. It is applied in method argument level
- The @PathVariable 
- ----------------annotation is used for data passed in the URI (e.g. RESTful web services) 
- while @RequestParam
- --------------------is used to extract the data found in query parameters.
+  @queryparamm: to consume values from query string we use @QueryParam. It is applied in method argument level
+ The @PathVariable  : annotation is used for data passed in the URI (e.g. RESTful web services)
+ while @RequestParam :is used to extract the data found in query parameters.
  ---------------------------------------------------------------------------------------------
  What is the difference between constructor and setter injection?
 Explain caching mechanism in hibernate framework?
@@ -33,25 +32,25 @@ Difference between abstraction and encapsulation how it is done in your project
 Heap memory area and stack memory area in java
 Fail fast and fail safe iterator
 ------------------------------------------------------------
- 1.What is dependency injection:
+ ##1.What is dependency injection:
                Spring IoC is achieved through Dependency Injection. Dependency Injection is the method of providing the dependencies and 
                Inversion of Control is the end result of Dependency Injection. 
                IoC is a design principle where the control flow of the program is inverted.
-2.What is difference between setter injection and constructor injection
-3.What is autowiring:
+##2.What is difference between setter injection and constructor injection
+##3.What is autowiring:
             Autowiring feature of spring framework enables you to inject the object dependency implicitly. It internally uses setter or constructor injection. 
             Autowiring can't be used to inject primitive and string values. It works with reference only.
 
-4.What is qualifier:
+##4.What is qualifier:
               The @Qualifier annotation in Spring is used to differentiate a bean among the same type of bean objects. 
  If we have more than one bean of the same type and want to wire only one of them then 
 use the @Qualifier annotation along with @Autowired to specify which exact bean will be wired.
 
-5.What is view resolver
-6.What is dispatcher servlet
-7.What controller returns:
+##5.What is view resolver
+##6.What is dispatcher servlet
+##7.What controller returns:
 
-8.How controller passes the view:
+###8.How controller passes the view:
            The other way of passing the data from Controller to View can be by passing an object of the model class to the View. 
            Erase the code of ViewData and pass the object of model class in return view. 
            Import the binding object of model class at the top of Index View and access the properties by @Model.
@@ -67,7 +66,7 @@ If two interface have same method and one class extend two interface what LL hap
 -------------------------------------------------------------------------------------------------
 
 
-Spring annotations
+####Spring annotations
 -----------------------------------------------
 class level annotations
 ------------------------
@@ -80,7 +79,7 @@ class level annotations
 @Repository, @Service, and @Controller are specializations of @Component for more specific use cases,
 for example, in the persistence, service, and presentation layers, respectively.
 ------------------------------------------------------------------------------------
-Annotations for extracting data from HTTP Request
+####Annotations for extracting data from HTTP Request
 ----------
 @RequestBody
 - getting the data from the HTTP request Body
@@ -119,7 +118,7 @@ Hibernate annotations
 Collection
 Singleton class
 ----------------------------------------------------------------------------------------------
-Maven basic commands
+#### Maven basic commands
 mvn clean
 mvn install
 mvn package --- command builds the maven project and packages them into a JAR
@@ -165,8 +164,10 @@ connection handle by system.
 Comparator comparable
 Java provides two interfaces to sort objects using data members of the class:
 
-Comparable- single sorting , ComapreTo() , java.lang  ,Collections.sort(List)    (by using year)
-Comparator- multiple sorting , compare()  , java.util ,Collections.sort(List Comparator)   (by using rating ,name)
+* Comparable- 
+* single sorting , 
+* ComapreTo() , java.lang  ,Collections.sort(List)    (by using year)
+ \* Comparator- multiple sorting , compare()  , java.util ,Collections.sort(List Comparator)   (by using rating ,name)
 -------------------------------------------------------------------
 
 --------------------------------------------------------------------
@@ -191,7 +192,7 @@ request -to http request
 session -to an HTTP session.
 Global-session - to a global HTTP session.
 ---------------------------------------------------------------------------
-Bean life cycle
+####Bean life cycle
 The Spring IoC container is responsible for instantiating, initializing, and wiring beans.
 The container also manages the life cycle of beans
 ApplicationContext is is in the center of inversion of control in Spring
@@ -200,7 +201,7 @@ which can be in the form of XML configuration or annotations.
 Spring ioc and setter getter
 The ApplicationContext (internally, it uses BeanFactory)
 --------------------------------------------------------------------------------------------------------
-Bean initialization
+####Bean initialization
 In spring you can initialize a bean by having the applicationContext. xml invoke a constructor,
 or you can set properties on the bean
 ---------------------------------------------------------------------
@@ -231,6 +232,7 @@ Arrays can hold both object and primitive type data
 ---------------------------------------------------------------
 ----------------------------------------------------------------
 What is list,set and map?
+----
 list -allow duplicate
 set - not allow duplicate
 map - may contain duplicate but key should be unique;
@@ -260,6 +262,7 @@ List - (order collection)
 --------------------------------------------------------------------------------------------------------
 
 What is exception and tell me name of both type of exception?
+----
 exception:-- An exception is an event, which occurs during the execution of a program,
 that disrupts the normal flow of the program's instructions.
 
@@ -308,8 +311,10 @@ Spring:
         A framework to develop Big Enterprise Application which include your servlet as well.
 -----------------------------------------------------------------------------------------------------------
 How spring mvc works?
+---
 
-DispatcherServlet as the Heart of Spring MVC -----
+DispatcherServlet as the Heart of Spring MVC
+-----
 (All the incoming requests are handled by the single servlet named
  DispatcherServlet which acts as the front controller in Spring's MVC module)
 1. mapping an HTTP request to a certain processing method.(dispatch()= to find an appropriate handler for the request and feed it the request/response parameters)
@@ -323,6 +328,9 @@ Difference between classNotFound Exception and classDefinationNotFound exception
  when you try to run a class at run time using Class.
  forName() or loadClass() methods and mentioned classes are not found in the classpath.
 
-
+-----
  classDefinationNotFound
  2. when a particular class is present at compile time, but was missing at run time.
+
+
+-----
