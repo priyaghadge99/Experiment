@@ -173,11 +173,12 @@ Spring modules
 --
 - Spring Core
     - Basic functionalies of Spring Framework
- - Spring Context
- - Spring web
- - Spring MVC
- - Spring ORM
- - Spring AOP
+- Spring Context
+- Spring web
+- Spring MVC
+    - (Model View Controller)
+- Spring ORM
+- Spring AOP
 
 
 ----------------------------------------------------------------------------------------
@@ -390,3 +391,16 @@ Difference between classNotFound Exception and classDefinationNotFound exception
 
 
 -----
+
+Following are the design patterns used in Spring Framework
+-----
+
+| type               |       info                                                                                                             |                     
+|-                   |  Model - Data about the state of the application or its components. May include routines for modification or access.
+View - An interpretation of the data (model). This is only limited to a visual representation, but could be audio, derived information (e.g. statistics piped into another model object), etc. Furthermore, a single model may have multiple views.
+Control - Handles external input to the system invoking modifications on the model.                                                                                                                       |                     
+|   mvc pattern      |                                                                                                                        |                     
+|                    |                                                                                                                        |                     
+|                    |                                                                                                                        |                     
+|                    |                                                                                                                        |                     
+|                    |                                                                                                                        |                     
