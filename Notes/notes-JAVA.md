@@ -145,25 +145,31 @@ Singleton class
 
 #### Maven basic commands
 ----
-mvn clean
-mvn install
-mvn package --- command builds the maven project and packages them into a JAR
-mvn compiler:compile   //for to compile java source class
-$ mvn compiler:testCompile   ---for test classses compile
+- mvn clean
+- mvn install
+- mvn package --- command builds the maven project and packages them into a JAR
+- mvn compiler:compile   //for to compile java source class
+- $ mvn compiler:testCompile   ---for test classses compile
+
+
 ---------------------------------------------------------------------------------
-Exception handling throw and throws
-Project details
-Bean creation
-Hibernate mappin
-SQL complex queries
-Hierarchy of exception
-New features in java7
-Jdk ,jre and jvm
-Web server and application server
-How to convert array to list
-How to convert list to array
+
+
+- Exception handling throw and throws
+- Project details
+- Bean creation
+- Hibernate mappin
+- SQL complex queries
+- Hierarchy of exception
+- New features in java7
+- Jdk ,jre and jvm
+- Web server and application server
+- How to convert array to list
+- How to convert list to array
+
 ----------------------------------------------------------------------------------
 Spring modules
+--
 - Spring Core
     - Basic functionalies of Spring Framework
  - Spring Context
