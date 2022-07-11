@@ -415,7 +415,7 @@ Following are the design patterns used in Spring Framework
   - Often, we want to create different objects based on a particular context.
   - example, our application may require a vehicle object. In a nautical environment, we want to create boats, but in an aerospace environment, we want to create airplanes:
   
-  - ! [ factory pattern ](https://www.baeldung.com/wp-content/uploads/2020/02/Factory-pattern.png)
+   ! [ factory pattern ](https://www.baeldung.com/wp-content/uploads/2020/02/Factory-pattern.png)
 - Singleton :
   - Beans defined in spring config files are singletons by default
   - Singleton pattern says that one and only one instance of a particular class will ever be created per classloader
