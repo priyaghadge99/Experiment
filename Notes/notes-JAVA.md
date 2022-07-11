@@ -1,19 +1,15 @@
-####Point cut in Aop
+*Point cut in Aop
 *Different between merge n update
-
-
----  
-
 *Concurrent vs syn lock
-* Hibernate locking
+*Hibernate locking
 *Re-interning n syn
-* How create deman thread
-* Serial garbage collector
- *What is differce between state less bean n state full bean in spring
- *Parallel garbage collector
- *spring transaction
- *How to achieve thread sefty in spring
- *Difference between @componant and @service
+*How create deman thread
+*Serial garbage collector
+*What is differce between state less bean n state full bean in spring
+*Parallel garbage collector
+*spring transaction
+*How to achieve thread sefty in spring
+*Difference between @componant and @service
 *Session factory is thread safe or not
 
 
@@ -27,19 +23,19 @@
 
 -----
 
- What is the difference between constructor and setter injection?
-Explain caching mechanism in hibernate framework?
-What LL the time period for expire cache?
-What is the advantage of using orm framework rather than jdbc connection?
-What do you mean by dialect?
-How hashcode() works
-?
-Tell me something about concurrent hashmap?
-What is dependency injection?
-Different type of annotations used in spring.
-Difference between abstraction and encapsulation how it is done in your project
-Heap memory area and stack memory area in java
-Fail fast and fail safe iterator
+*What is the difference between constructor and setter injection?
+*Explain caching mechanism in hibernate framework?
+*What LL the time period for expire cache?
+*What is the advantage of using orm framework rather than jdbc connection?
+*What do you mean by dialect?
+*How hashcode() works
+*?
+*Tell me something about concurrent hashmap?
+*What is dependency injection?
+*Different type of annotations used in spring.
+*Difference between abstraction and encapsulation how it is done in your project
+*Heap memory area and stack memory area in java
+*Fail fast and fail safe iterator
 
 ------------------------------------------------------------
 
