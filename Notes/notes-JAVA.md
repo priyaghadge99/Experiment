@@ -1,20 +1,20 @@
 ####Point cut in Aop
-Different between merge n update
+*Different between merge n update
 
 
 ---  
 
-Concurrent vs syn lock
- Hibernate locking
-Re-interning n syn
- How create deman thread
- Serial garbage collector
- What is differce between state less bean n state full bean in spring
- Parallel garbage collector
- spring transaction
- How to achieve thread sefty in spring
- Difference between @componant and @service
-Session factory is thread safe or not
+*Concurrent vs syn lock
+* Hibernate locking
+*Re-interning n syn
+* How create deman thread
+* Serial garbage collector
+ *What is differce between state less bean n state full bean in spring
+ *Parallel garbage collector
+ *spring transaction
+ *How to achieve thread sefty in spring
+ *Difference between @componant and @service
+*Session factory is thread safe or not
 
 
 ----
@@ -121,6 +121,7 @@ for example, in the persistence, service, and presentation layers, respectively.
 - set the body
 - set the headers
 /contacts/{name}/category/{catg}
+- 
 ------------------------------------------------------------------------------------------------------------------
 Hibernate annotations
 @Entity  -- for pojo class
