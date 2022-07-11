@@ -91,12 +91,12 @@ If two interface have same method and one class extend two interface what LL hap
 -----------------------------------------------
 class level annotations
 -----------------------
--@RestController-- creating controller bean
--@CrossOrigin :Used over a Controller, if the request is coming from other IP/domain
--@Service--All your business logic should be in Service classes.
--@Repository-- All your database access logic should be in DAO classes.
--@Component--@Component is a generic stereotype for any Spring-managed component.
--@Repository, @Service, and @Controller are specializations of @Component for more specific use cases,
+- @RestController-- creating controller bean
+- @CrossOrigin :Used over a Controller, if the request is coming from other IP/domain
+- @Service--All your business logic should be in Service classes.
+- @Repository-- All your database access logic should be in DAO classes.
+- @Component--@Component is a generic stereotype for any Spring-managed component.
+- @Repository, @Service, and @Controller are specializations of @Component for more specific use cases,
 for example, in the persistence, service, and presentation layers, respectively.
 
 ####Annotations for extracting data from HTTP Request
@@ -217,6 +217,7 @@ ConcurrentHashMap provides methods for bulk operations like forEach() , search()
 
 
 Wait,notify,notifyall
+---
 defined in object class in Java.
 When wait(): is called on a thread holding the monitor lock,
 it surrenders the monitor lock and enters the waiting state.
@@ -225,12 +226,12 @@ notifyAll() sends a notification to all waiting threads.
 
 ----------------------------------------------------------------------------
 
-Different scopes of spring bean
-singleton=single instance per ioc
-prototype=to have any number of object instances.
-request -to http request
-session -to an HTTP session.
-Global-session - to a global HTTP session.
+* Different scopes of spring bean
+* [1] singleton=single instance per ioc
+* [2] prototype=to have any number of object instances.
+* [3] request -to http request
+* [4] session -to an HTTP session.
+* [5] Global-session - to a global HTTP session.
 
 
 ---------------------------------------------------------------------------
@@ -266,12 +267,12 @@ or you can set properties on the bean
 
 
 
- -HashMap doesn’t allow duplicate keys but allows duplicate values.
- -That means A single key can’t contain more than 1 value but more than 1 key can contain a single value.
- -HashMap allows null key also but only once and multiple null values.
- -This class makes no guarantees as to the order of the map; in particular,
- -it does not guarantee that the order will remain constant over time.
- -It is roughly similar to HashTable but is unsynchronized.
+ - HashMap doesn’t allow duplicate keys but allows duplicate values.
+ - That means A single key can’t contain more than 1 value but more than 1 key can contain a single value.
+ - HashMap allows null key also but only once and multiple null values.
+ - This class makes no guarantees as to the order of the map; in particular,
+ - it does not guarantee that the order will remain constant over time.
+ - It is roughly similar to HashTable but is unsynchronized.
 
 Why we use collections over array?
 ---
@@ -283,29 +284,31 @@ Arrays can hold both object and primitive type data
 ----------------------------------------------------------------
 What is list,set and map?
 ----
--list -allow duplicate
--set - not allow duplicate
--map - may contain duplicate but key should be unique;
--Map holds two objects per Entry e.g. a key and a value
+- list -allow duplicate
+- set - not allow duplicate
+- map - may contain duplicate but key should be unique;
+- Map holds two objects per Entry e.g. a key and a value
 
 
 --------
 
--set-  -(unorder)
+-set-   
+
+        -(unorder)
         -hashset
         -LinkHashSet - Order
         -TreeSet    -  Sorted  (implementation of the SortedSet interface by compare() or compareTo() method. )
 
--map -
-        -hashmap- allow null value and one null key.
-        -LinkHashMap -  order
-        -treeMap-- TreeMap maintains the order of the objects but HashMap will not
-        -Hashtable
-
--List - (order collection)
-        -ArrayList- faster than vector
-        -LinkList
-        -vector- synchronized and threadsafe
+-map-
+        - [1]hashmap- allow null value and one null key.
+        - [2]LinkHashMap -  order
+        - [3]treeMap-- TreeMap maintains the order of the objects but HashMap will not
+        - [4]Hashtable
+-List -
+           -(order collection)
+                -ArrayList- faster than vector
+                -LinkList
+                -vector- synchronized and threadsafe
 
         ArrayList if you are using ArrayList in Single threaded environment and
         use Vector if you need a thread-safe collection.
@@ -320,7 +323,6 @@ that disrupts the normal flow of the program's instructions.
 1.built in exception( available in Java libraries)
 
 ArithmeticException
-
 ArrayIndexOutOfBoundsException
 ClassNotFoundException
 FileNotFoundException
