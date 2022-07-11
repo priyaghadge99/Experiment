@@ -409,18 +409,29 @@ Following are the design patterns used in Spring Framework
 - Proxy Pattern :
   - Spring uses either JDK proxies (preferred wheneven the proxied target implements at least one interface) or CGLIB proxies (if the target object does not implement any interfaces) to create the proxy for a given target bean.
   - Unless configured to do otherwise, Spring AOP performs run-time weaving Suppose we want to log every method entry and exit. This can be achieved by writing log statements in every method at the start and end. But this will require lot of code work. There are various such tasks like Security which need to be applied across all methods or classes. These are known as cross cutting concerns.AOP addresses the problem of cross-cutting concerns, which would be any kind of code that is repeated in different methods and cannot normally be completely refactored into its own module, like with logging or verification
-
+  - ![proxy pttern img ](https://www.baeldung.com/wp-content/uploads/2020/02/Proxy-class-diagram.png)
 - Factory Pattern	
   - patterns is used by spring to load beans using BeanFactory and Application context.
   - Often, we want to create different objects based on a particular context.
   - example, our application may require a vehicle object. In a nautical environment, we want to create boats, but in an aerospace environment, we want to create airplanes:
   
-   ! [ factory pattern ](https://www.baeldung.com/wp-content/uploads/2020/02/Factory-pattern.png)
+  - ! [ factory pattern ](https://www.baeldung.com/wp-content/uploads/2020/02/Factory-pattern.png)
+  - ```
+    public interface BeanFactory {
+
+    getBean(Class<T> requiredType);
+    getBean(Class<T> requiredType, Object... args);
+    getBean(String name);
+
+    // ...
+    ]
+   ```
 - Singleton :
   - Beans defined in spring config files are singletons by default
   - Singleton pattern says that one and only one instance of a particular class will ever be created per classloader
   - It is the scope of bean definition to a single object instance per Spring IoC container. 
   - The default scope in Spring is Singleton.
+  - ![Singleton](https://www.baeldung.com/wp-content/uploads/2020/02/Singleton.png)
   
 - Template pattern
   - Template method design pattern is to define an algorithm as skeleton of operations and leave the details to be implemented by the child classes. The overall structure and sequence of the algorithm is preserved by the parent class. 
