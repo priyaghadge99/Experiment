@@ -1,5 +1,7 @@
 //// A union by rank and path compression
-//// based program to detect cycle in a graph
+//// based program to detect cycle
+//
+// in a graph
 public class Graph2 {
     int vertices , edges;
     Edge edge[];
@@ -18,9 +20,10 @@ public class Graph2 {
      this.edges = e;
      this.vertices = v;
      edge   = new Edge[this.edges];
-     for (int i=0;i<this.edges; i++){
+     for (int i=0;i<this.edges; i++)
+     {
          edge[i] = new Edge();
-     }
+        }
     }
     // A utility function to find
     // set of an element i (uses
@@ -89,6 +92,10 @@ public class Graph2 {
 
         graph2.edge[2].src= 0;
         graph2.edge[2].desc=2;
+      /* 0
+        | \
+        |   \
+        1-----2 */
 
         if(graph2.isCycle(graph2)== true){
             System.out.println("Contain Cycle");
