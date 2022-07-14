@@ -8,8 +8,6 @@
 
 import java.util.Scanner;
 
-
-
 public class Program1 {
     public static Node head;
     public static Node tail;
