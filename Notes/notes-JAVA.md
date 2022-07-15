@@ -180,19 +180,19 @@ Singleton class
   ![JVMArachitecture](https://techvidvan.com/tutorials/wp-content/uploads/sites/2/2020/06/JVM-Architecture.jpg)
 
     
-    - class area : stores per-class structures such as the runtime constant pool, field and method data, the code for methods.
-    - heap : runtime data area in which objects are allocated.
-    - stack : Java Stack stores frames. , holds local varible , play part in method invocation part and return 
-    - Pc - register : jvm instruction address which is currently executing 
-    - Native Method Stack :It contains all the native methods used in the application.
-    
-    - Execution Engine : 
-        - virtual processor 
-        - Interpreter: Read bytecode stream then execute the instructions.
-        - just-In-Time(JIT) compiler : improve performance JIT compiles parts of the byte code with similar functionality at the same time and reduces the amount of time needed for compilation.
-    
-    - native method interface : Native Method Interface allows Java code running in a JVM to call by libraries and native applications.
-    -Native Libraries is a collection of the Native Libraries(C, C++) which are essential for the Execution Engine.
+            - class area : stores per-class structures such as the runtime constant pool, field and method data, the code for methods.
+            - heap : runtime data area in which objects are allocated.
+            - stack : Java Stack stores frames. , holds local varible , play part in method invocation part and return 
+            - Pc - register : jvm instruction address which is currently executing 
+            - Native Method Stack :It contains all the native methods used in the application.
+            
+            - Execution Engine : 
+                - virtual processor 
+                - Interpreter: Read bytecode stream then execute the instructions.
+                - just-In-Time(JIT) compiler : improve performance JIT compiles parts of the byte code with similar functionality at the same time and reduces the amount of time needed for compilation.
+            
+            - native method interface : Native Method Interface allows Java code running in a JVM to call by libraries and native applications.
+            -Native Libraries is a collection of the Native Libraries(C, C++) which are essential for the Execution Engine.
 - How to convert array to list
 - How to convert list to array
 
@@ -288,8 +288,8 @@ or you can set properties on the bean
  What is hashmap?
 ---
  HashMap is a part of java.util package.
- 1. HashMap extends an abstract class AbstractMap which also provides an incomplete implementation of Map interface.
- 2.It also implements Cloneable and Serializable interface.
+ - 1. HashMap extends an abstract class AbstractMap which also provides an incomplete implementation of Map interface.
+ - 2. It also implements Cloneable and Serializable interface.
  K and V in the above definition represent Key and Value respectively.
  to access a value one must know its key.
  HashMap is known as HashMap because it uses a technique called Hashing.
