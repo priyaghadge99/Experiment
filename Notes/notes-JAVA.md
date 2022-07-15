@@ -85,7 +85,8 @@ The below image shows the Stack and Heap memory with reference to the above prog
 - In line 9, main() method terminates and the stack memory created for main() method is destroyed. Also, the program ends at this line, hence Java Runtime frees all the memory and ends the execution of the program.
 
 
-  [difference_between_stack_heap](https://www.journaldev.com/4098/java-heap-space-vs-stack-memory#:~:text=Difference%20between%20Java%20Heap%20Space%20and%20Stack%20Memory&text=Heap%20memory%20is%20used%20by,contains%20the%20reference%20to%20it.)
+  - [difference_between_stack_heap](https://www.journaldev.com/4098/java-heap-space-vs-stack-memory#:~:text=Difference%20between%20Java%20Heap%20Space%20and%20Stack%20Memory&text=Heap%20memory%20is%20used%20by,contains%20the%20reference%20to%20it.)
+  - [Java-interview_questions](https://www.journaldev.com/2366/core-java-interview-questions-and-answers)
 
 * Fail fast and fail safe iterator
  
