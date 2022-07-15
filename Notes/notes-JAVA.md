@@ -15,8 +15,8 @@
 
 ----
 
- Difference between @queryparam and @requestparam
-----
+ ### Difference between @queryparam and @requestparam
+
   - @queryparamm: 
     - to consume values from query string we use @QueryParam. It is applied in method argument level
   - @PathVariable  
@@ -42,37 +42,37 @@
  
 ------------------------------------------------------------
 
-1.What is dependency injection:
-----
+### 1.What is dependency injection:
+
                Spring IoC is achieved through Dependency Injection. Dependency Injection is the method of providing the dependencies and 
                Inversion of Control is the end result of Dependency Injection. 
                IoC is a design principle where the control flow of the program is inverted.
 
-2.What is difference between setter injection and constructor injection
----
+### 2.What is difference between setter injection and constructor injection
 
-3.What is autowiring:
----
+
+### 3.What is autowiring:
+
             Autowiring feature of spring framework enables you to inject the object dependency implicitly. It internally uses setter or constructor injection. 
             Autowiring can't be used to inject primitive and string values. It works with reference only.
 
-4.What is qualifier:
-----
+### 4.What is qualifier:
+
               The @Qualifier annotation in Spring is used to differentiate a bean among the same type of bean objects. 
  If we have more than one bean of the same type and want to wire only one of them then 
 use the @Qualifier annotation along with @Autowired to specify which exact bean will be wired.
 
-5.What is view resolver
-----
+### 5.What is view resolver
 
-6.What is dispatcher servlet
-----
 
-7.What controller returns:
-----
+### 6.What is dispatcher servlet
 
-8.How controller passes the view:
-----------
+
+### 7.What controller returns:
+
+
+### 8.How controller passes the view:
+
            The other way of passing the data from Controller to View can be by passing an object of the model class to the View. 
            Erase the code of ViewData and pass the object of model class in return view. 
            Import the binding object of model class at the top of Index View and access the properties by @Model.
@@ -90,10 +90,10 @@ If two interface have same method and one class extend two interface what LL hap
 -------------------------------------------------------------------------------------------------
 
 
-####Spring annotations
------------------------------------------------
-class level annotations
------------------------
+### Spring annotations
+
+#### class level annotations
+
 - @RestController-- creating controller bean
 - @CrossOrigin :Used over a Controller, if the request is coming from other IP/domain
 - @Service--All your business logic should be in Service classes.
@@ -102,8 +102,8 @@ class level annotations
 - @Repository, @Service, and @Controller are specializations of @Component for more specific use cases,
 for example, in the persistence, service, and presentation layers, respectively.
 
-####Annotations for extracting data from HTTP Request
-----------
+#### Annotations for extracting data from HTTP Request
+
 * @RequestBody
  - getting the data from the HTTP request Body
 * @PathVariable
@@ -147,8 +147,8 @@ Singleton class
 
 -------------------------------
 
-#### Maven basic commands
-----
+### Maven basic commands
+
 - mvn clean
 - mvn install
 - mvn package --- command builds the maven project and packages them into a JAR
@@ -166,14 +166,40 @@ Singleton class
 - SQL complex queries
 - Hierarchy of exception
 - New features in java7
-- Jdk ,jre and jvm
-- Web server and application server
+- ### Jdk ,jre and jvm 
+   ![JDK-JRE-JVM](https://techvidvan.com/tutorials/wp-content/uploads/sites/2/2020/06/Difference-Between-JDK-JRE-JVM.jpg)
+  : The following are a few important differences between JDK, JVM, and JRE.
+
+  1. JVM stands for Java Virtual machine, JDK stands for Java development kit, and JRE stands for Java runtime environment.
+
+  2. JDK is for the development environment whereas JRE is for the run time environment.
+
+  3. JVM runs inside the JRE environment. JRE contains class libraries, Java Virtual Machine and other files other than development tools like compiler and debugger.
+
+  JVM Architure 
+  ![JVMArachitecture](https://techvidvan.com/tutorials/wp-content/uploads/sites/2/2020/06/JVM-Architecture.jpg)
+
+    
+    - class area : stores per-class structures such as the runtime constant pool, field and method data, the code for methods.
+    - heap : runtime data area in which objects are allocated.
+    - stack : Java Stack stores frames. , holds local varible , play part in method invocation part and return 
+    - Pc - register : jvm instruction address which is currently executing 
+    - Native Method Stack :It contains all the native methods used in the application.
+    
+    - Execution Engine : 
+        - virtual processor 
+        - Interpreter: Read bytecode stream then execute the instructions.
+        - just-In-Time(JIT) compiler : improve performance JIT compiles parts of the byte code with similar functionality at the same time and reduces the amount of time needed for compilation.
+    
+    - native method interface : Native Method Interface allows Java code running in a JVM to call by libraries and native applications.
+    -Native Libraries is a collection of the Native Libraries(C, C++) which are essential for the Execution Engine.
 - How to convert array to list
 - How to convert list to array
 
 ----------------------------------------------------------------------------------
-Spring modules
---
+### Spring modules
+
+
 - Spring Core
     - Basic functionalies of Spring Framework
 - Spring Context
@@ -240,7 +266,7 @@ notifyAll() sends a notification to all waiting threads.
 
 
 ---------------------------------------------------------------------------
-####Bean life cycle
+Bean life cycle
 ---
 The Spring IoC container is responsible for instantiating, initializing, and wiring beans.
 The container also manages the life cycle of beans
@@ -252,7 +278,7 @@ The ApplicationContext (internally, it uses BeanFactory)
 
 
 --------------------------------------------------------------------------------------------------------
-####Bean initialization
+Bean initialization
 ---
 In spring you can initialize a bean by having the applicationContext. xml invoke a constructor,
 or you can set properties on the bean
